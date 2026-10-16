@@ -1,0 +1,6 @@
+browserstack-sdk @ https://sdk-assets.browserstack.com/python/browserstack_sdk-latest.tar.gz
+Appium-Python-Client==2.6.1
+# selenium 4.10+ breaks the BrowserStack SDK's driver patch with this Appium client.
+selenium==4.9.1
+pytest==9.1.1
+pytest-bdd==9.0.0

@@ -1,0 +1,28 @@
+userName: ${BROWSERSTACK_USERNAME}
+accessKey: ${BROWSERSTACK_ACCESS_KEY}
+
+projectName: Test-Companion-Demo-Vision
+buildName: banking-app-android
+buildIdentifier: '#${BUILD_NUMBER}'
+
+source: 'python:appium-sample-sdk:v1.0'
+
+# Uploaded build of the app under test (bs://...), supplied via the BROWSERSTACK_APP_ID env var.
+app: ${BROWSERSTACK_APP_ID}
+
+platforms:
+  - deviceName: Samsung Galaxy S23
+    platformVersion: "13.0"
+    platformName: android
+    # Without this the bottom tab bar is missing from the element hierarchy.
+    appium:allowInvisibleElements: true
+
+# One scenario today; raise together with the number of scenarios and the account's parallels.
+parallelsPerPlatform: 1
+
+# The app under test uses a public backend; no tunnel needed.
+browserstackLocal: false
+
+debug: false
+networkLogs: false
+consoleLogs: errors
